@@ -1,6 +1,6 @@
 # 概要
 
-タートルボット 3 の動作テスト（wsl, docker, gazebo, gpu）
+タートルボット 3 の動作テスト（docker, gazebo, wsl, gpu）
 
 # 手順
 
