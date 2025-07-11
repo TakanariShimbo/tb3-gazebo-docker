@@ -22,14 +22,22 @@ git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 
 ```bash
 docker compose up -d --build
-docker compose exec ros2 bash
 ```
 
-## シミュレーション開始
+## シミュレーション開始&操作
+
+ターミナル 1:
 
 ```bash
-export TURTLEBOT3_MODEL=burger
+docker compose exec ros2 bash
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+```
+
+ターミナル 2:
+
+```bash
+docker compose exec ros2 bash
+ros2 run turtlebot3_teleop teleop_keyboard
 ```
 
 ## コンテナ終了
