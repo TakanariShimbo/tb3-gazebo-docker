@@ -1,6 +1,6 @@
 # 概要
 
-タートルボット 3 の動作テスト（wsl, docker, gazebo）
+タートルボット 3 の動作テスト（wsl, docker, gazebo, gpu）
 
 # 手順
 
@@ -21,7 +21,7 @@ git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 ## コンテナ起動
 
 ```bash
-docker compose up -d
+docker compose up -d --build
 docker compose exec ros2 bash
 ```
 

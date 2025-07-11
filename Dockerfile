@@ -17,7 +17,10 @@ RUN apt update && apt install -y \
     ros-${ROS_DISTRO}-cartographer \
     ros-${ROS_DISTRO}-cartographer-ros \
     ros-${ROS_DISTRO}-navigation2 \
-    ros-${ROS_DISTRO}-nav2-bringup
+    ros-${ROS_DISTRO}-nav2-bringup \
+    mesa-utils \
+    libgl1-mesa-glx \
+    libgl1-mesa-dri
 
 RUN rosdep update && rosdep install -i --from-path src --rosdistro ${ROS_DISTRO} -y
 
