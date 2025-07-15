@@ -85,6 +85,10 @@ ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=true slam:=False autostart:=true map:=$HOME/maps/my_world.yaml
 ```
 
+Nav2 解説記事: https://qiita.com/sfc_nakanishi_lab/items/028edb3a7d5ed0300e33
+例 1: https://www.youtube.com/watch?v=r4fIkcktZUM
+例 2: https://www.youtube.com/watch?v=ANgA5AWzWeo
+
 ## コンテナ終了
 
 ```bash
