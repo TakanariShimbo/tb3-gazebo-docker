@@ -79,7 +79,7 @@ ros2 run nav2_map_server map_saver_cli -f ~/maps/my_world
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
 
-ターミナル 2:キーボードでのロボット操作
+ターミナル 2:ナビゲータ起動
 
 ```bash
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=true slam:=False autostart:=true map:=$HOME/maps/my_world.yaml
