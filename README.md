@@ -98,7 +98,7 @@ Nav2 解説記事: https://qiita.com/sfc_nakanishi_lab/items/028edb3a7d5ed0300e3
 ros2 launch turtlebot3_manipulation_gazebo gazebo.launch.py
 ```
 
-ターミナル 3:キーボードでのロボット操作
+ターミナル 2:Movit 起動
 
 ```bash
 ros2 launch turtlebot3_manipulation_moveit_config servo.launch.py use_sim_time:=true
@@ -108,6 +108,20 @@ ros2 launch turtlebot3_manipulation_moveit_config servo.launch.py use_sim_time:=
 
 ```bash
 ros2 run turtlebot3_manipulation_teleop turtlebot3_manipulation_teleop
+```
+
+### Movit
+
+ターミナル 1:シミュレータ起動
+
+```bash
+ros2 launch turtlebot3_manipulation_gazebo gazebo.launch.py
+```
+
+ターミナル 2:Movit 起動
+
+```bash
+ros2 launch turtlebot3_manipulation_moveit_config moveit_core.launch.py
 ```
 
 ## コンテナ終了

@@ -23,6 +23,8 @@ RUN apt update && apt install -y \
     ros-${ROS_DISTRO}-gazebo-ros2-control \
     ros-${ROS_DISTRO}-ros2-control \
     ros-${ROS_DISTRO}-ros2-controllers \
+    ros-${ROS_DISTRO}-moveit-ros-move-group \
+    ros-${ROS_DISTRO}-turtlebot3-manipulation-moveit-config \
     mesa-utils \
     libgl1-mesa-glx \
     libgl1-mesa-dri
