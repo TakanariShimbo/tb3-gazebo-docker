@@ -17,6 +17,7 @@ git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3.git
 git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
 git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3_manipulation.git
+git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3_home_service_challenge.git
 ```
 
 ## コンテナ起動
@@ -112,7 +113,7 @@ Nav2 解説記事: https://qiita.com/sfc_nakanishi_lab/items/028edb3a7d5ed0300e3
 例 1: https://www.youtube.com/watch?v=r4fIkcktZUM  
 例 2: https://www.youtube.com/watch?v=ANgA5AWzWeo
 
-### キーボード操作（マニュピュレータ）
+### キーボード操作（with マニュピュレータ）
 
 ターミナル 1:シミュレータ起動
 
@@ -160,6 +161,34 @@ request:
 planning_options:
   plan_only: false
 "
+```
+
+### キーボード操作（with マニュピュレータ）
+
+ターミナル 1:シミュレータ起動
+
+```bash
+ros2 launch turtlebot3_manipulation_gazebo turtlebot3_home_service_challenge.launch.py
+```
+
+ターミナル 2:Nav2 起動
+
+```bash
+ros2 launch turtlebot3_home_service_challenge_tools navigation2.launch.py
+```
+
+ターミナル 3:コアノード起動
+
+```bash
+ros2 launch turtlebot3_home_service_challenge_core core_node.launch.py
+```
+
+ターミナル 4:指令送信
+
+```bash
+cat ~/turtlebot3_ws/src/turtlebot3_home_service_challenge/turtlebot3_home_service_challenge_core/config/scenario.yaml
+
+ros2 topic pub -1 /scenario_selection std_msgs/msg/String "{data: 'room1'}"
 ```
 
 ## コンテナ終了
