@@ -206,6 +206,27 @@ cat ~/turtlebot3_ws/src/turtlebot3_home_service_challenge/turtlebot3_home_servic
 ros2 topic pub -1 /scenario_selection std_msgs/msg/String "{data: 'room1'}"
 ```
 
+### MCP 操作
+
+ターミナル 1:シミュレータ起動
+
+```bash
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+```
+
+ターミナル 2:サーバー起動
+
+```bash
+ros2 launch rosbridge_server rosbridge_websocket_launch.xml
+```
+
+ターミナル 3:claude code 起動
+
+```bash
+# wsl で実行
+claude
+```
+
 ## コンテナ終了
 
 ```bash
