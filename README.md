@@ -7,9 +7,6 @@
 ## リポジトリをクローン
 
 ```bash
-# MCPのリポジトリは直下にクローン
-git clone https://github.com/lpigeon/ros-mcp-server.git
-
 # ディレクトリの作成・移動
 mkdir -p workspace/src
 cd workspace/src
@@ -21,18 +18,6 @@ git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
 git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3_manipulation.git
 git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3_home_service_challenge.git
-```
-
-## MCP の仮想環境用意
-
-```bash
-# ディレクトリの移動
-cd ros-mcp-server
-
-# 仮想環境作成
-uv sync
-
-# uv --directory ./ros-mcp-server run server.py
 ```
 
 ## コンテナ起動
