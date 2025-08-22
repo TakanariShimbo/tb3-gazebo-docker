@@ -1,8 +1,8 @@
 {
   "mcpServers": {
-    "ros-mcp-server": {
-      "command": "uvx",
-      "args": ["takanarishimbo-rosbridge-mcp-server"]
+    "ros2": {
+      "type": "http",
+      "url": "http://localhost:9090/mcp"
     }
   }
 }

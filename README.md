@@ -199,16 +199,21 @@ ros2 topic pub -1 /scenario_selection std_msgs/msg/String "{data: 'room1'}"
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
 
-ターミナル 2:サーバー起動
+ターミナル 2:MCP サーバー起動
 
 ```bash
-ros2 launch rosbridge_server rosbridge_websocket_launch.xml
+MCP_TRANSPORT=streamable-http MCP_HOST=0.0.0.0 MCP_PORT=9090 uvx takanarishimbo-ros2-exec-mcp
 ```
 
 ターミナル 3:claude code 起動
 
+wsl で実行
+
 ```bash
-# wsl で実行
+# mcp の追加
+claude mcp add --scope project --transport http ros2 http://localhost:9090/mcp
+
+# claude code 起動
 claude
 ```
 
